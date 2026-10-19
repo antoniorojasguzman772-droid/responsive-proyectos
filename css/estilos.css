@@ -1,0 +1,75 @@
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c1, .c2, .c3, .c4, .c5 {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.c1 { background-color: #ffcccc; }
+.c2 { background-color: #ffe4b5; }
+.c3 { background-color: #ccffcc; }
+.c4 { background-color: #cce0ff; }
+.c5 { background-color: #e0ccff; }
+
+/* ============================================
+   📱 MÓVIL (por defecto) — cada caja 100%
+   ============================================ */
+.c1, .c2, .c3, .c4, .c5 {
+    width: 100%;
+}
+
+/* ============================================
+   📱 TABLETAS (≥ 600px)
+   - c2 a c5 al 50% (se van juntando de a 2)
+   ============================================ */
+@media (min-width: 600px) {
+    .c2, .c3, .c4, .c5 {
+        width: 50%;
+    }
+}
+
+/* ============================================
+   💻 DESKTOP (≥ 800px)
+   - c1 al 100%
+   - c2 al 100%
+   - c3, c4, c5 al 33.33%
+   - Container centrado de 800px
+   ============================================ */
+@media (min-width: 800px) {
+    .c1 {
+        width: 100%;
+    }
+
+    .c2 {
+        width: 100%;
+    }
+
+    .c3, .c4, .c5 {
+        width: 33.33%;
+    }
+
+    .container {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
